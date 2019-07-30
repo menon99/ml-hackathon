@@ -8,7 +8,7 @@ import datetime as dt
 s='DataSets/Train.csv'
 #s='DataSets/rem_outliers.csv'
 df=clean(s)
-#df.drop_duplicates('date_time', keep='first', inplace=True)
+df.drop_duplicates('date_time', keep='first', inplace=True)
 Y=df['traffic_volume'].values
 X=df.drop(['date_time', 'traffic_volume', 'dew_point'], axis=1)
 
